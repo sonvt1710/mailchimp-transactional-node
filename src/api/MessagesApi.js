@@ -84,6 +84,14 @@ module.exports = function (apiClient) {
   };
 
   /**
+   * Send SMS message
+   * Send a new SMS message through Mandrill
+   */
+  this.sendSms = function (body) {
+    return this.apiClient.post('/messages/send-sms', body);
+  };
+
+  /**
    * Send using message template
    * Send a new transactional message through the Transactional API using a template.
    */
