@@ -12,8 +12,8 @@ module.exports = function (apiClient) {
   };
 
   /**
-   * Add mailbox route
-   * Add a new mailbox route to an inbound domain.
+   * Add route
+   * Add a new route to an inbound domain or SMS program. Provide either domain or phone (not both).
    */
   this.addRoute = function (body) {
     return this.apiClient.post('/inbound/add-route', body);
@@ -52,8 +52,8 @@ module.exports = function (apiClient) {
   };
 
   /**
-   * List mailbox routes
-   * List the mailbox routes defined for an inbound domain.
+   * List routes
+   * List the routes defined for an inbound domain or SMS program. Provide either domain or phone (not both).
    */
   this.routes = function (body) {
     return this.apiClient.post('/inbound/routes', body);
