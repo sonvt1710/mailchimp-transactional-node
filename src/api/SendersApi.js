@@ -20,6 +20,14 @@ module.exports = function (apiClient) {
   };
 
   /**
+   * Delete sender domain
+   * Deletes an unverified sender domain from your account. Verified domains cannot be deleted via API and require login confirmation.
+   */
+  this.deleteDomain = function (body) {
+    return this.apiClient.post('/senders/delete-domain', body);
+  };
+
+  /**
    * List sender domains
    * Returns the sender domains that have been added to this account.
    */

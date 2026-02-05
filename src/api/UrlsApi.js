@@ -20,6 +20,14 @@ module.exports = function (apiClient) {
   };
 
   /**
+   * Delete tracking domain
+   * Deletes an unverified tracking domain from your account. Valid tracking domains cannot be deleted via API and require login confirmation.
+   */
+  this.deleteTrackingDomain = function (body) {
+    return this.apiClient.post('/urls/delete-tracking-domain', body);
+  };
+
+  /**
    * List most clicked urls
    * Get the 100 most clicked URLs.
    */

@@ -76,6 +76,14 @@ module.exports = function (apiClient) {
   };
 
   /**
+   * Send using Mailchimp template
+   * Send a new transactional message through Mandrill using a Mailchimp Transactional template.
+   */
+  this.sendMcTemplate = function (body) {
+    return this.apiClient.post('/messages/send-mc-template', body);
+  };
+
+  /**
    * Send mime document
    * Take a raw MIME document for a message, and send it exactly as if it were sent through the Transactional API's SMTP servers.
    */
