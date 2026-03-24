@@ -28,30 +28,6 @@ module.exports = function (apiClient) {
   };
 
   /**
-   * List most clicked urls
-   * Get the 100 most clicked URLs.
-   */
-  this.list = function (body) {
-    return this.apiClient.post('/urls/list', body);
-  };
-
-  /**
-   * Search most clicked urls
-   * Return the 100 most clicked URLs that match the search query given.
-   */
-  this.search = function (body) {
-    return this.apiClient.post('/urls/search', body);
-  };
-
-  /**
-   * Get url history
-   * Return the recent history (hourly stats for the last 30 days) for a URL
-   */
-  this.timeSeries = function (body) {
-    return this.apiClient.post('/urls/time-series', body);
-  };
-
-  /**
    * List tracking domains
    * Get the list of tracking domains set up for this account.
    */
